@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit" class="form">
     <div class="form-variables">
-      <label for="select-restrictions">Tipo de restricción</label>
+      <label for="select-restrictions">Tipo de función objetivo</label>
       <select id="select-restrictions" v-model="restrictionType">
         <option value="max">>= (max)</option>
         <option value="min"><= (min)</option>
@@ -14,8 +14,6 @@
         id="variables"
         type="number"
         min="1"
-        max="5"
-        placeholder="Max.5"
         v-model.number="variablesLength"
       />
     </div>
@@ -26,8 +24,6 @@
         id="restrictions"
         type="number"
         min="1"
-        max="5"
-        placeholder="Max.5"
         v-model.number="restrictionsLength"
       />
     </div>
